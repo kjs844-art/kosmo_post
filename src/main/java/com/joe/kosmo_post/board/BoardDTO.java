@@ -17,6 +17,10 @@ public class BoardDTO {
 	private String boardWriter; //작성자
 	private LocalDateTime boardDate; //작성일자
 	private Long boardHit; //조회수
+	public void setBoardTitle(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	//접근지정자 private : 클래스 내부에서만 접근 가능
 	

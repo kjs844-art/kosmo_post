@@ -6,6 +6,14 @@
 	<select id="list" resultType="QnaDTO">
 		select * from "tb_qna"
 	</select>
+	
+	
+	<insert id="create" parameterType="QnaDTO">
+		INSERT INTO "TB_QNA"
+		VALUE (default, #{boardTitle}, #{boardWriter}, #{boardContents}, CURRENT_TIMESTAMP, 0))
+	</insert>
+	
+	
 </mapper>
 
 

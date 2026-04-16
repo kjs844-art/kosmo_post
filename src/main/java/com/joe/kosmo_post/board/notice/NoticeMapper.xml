@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- MAPPER.java의 풀패키지명/믈래스명 -->
+
+	<mapper namespace="com.joe.kosmo_post.board.notice.NoticeMapper">
+		<!-- ID는 mapper.java의 메서드명을 써라 -->
+		<select id="list" resultType="NoticeDTO">
+		select * from "tb_notice"
+		</select>
+	<insert id="create" parameterType="NoticeDTO">
+	INSERT INTO "TB_NOTICE"
+	VALUES (null,#(boardTitle),  
+	</insert>
+	<insert id="add" parameterType="NoticeDTO">
+    INSERT INTO "TB_NOTICE" (BOARD_TITLE, BOARD_WRITER, BOARD_CONTENTS, REG_DATE, VIEW_COUNT)
+    VALUES (#{boardTitle}, #{boardWriter}, #{boardContents}, CURRENT_TIMESTAMP, 0)
+</insert>
+	
+	</mapper>

@@ -17,19 +17,16 @@ public class BoardDTO {
 	private String boardWriter; //작성자
 	private LocalDateTime boardDate; //작성일자
 	private Long boardHit; //조회수
-	public void setBoardTitle(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	//접근지정자 private : 클래스 내부에서만 접근 가능
-	
-	//Java 8byte long 들어가는것 롱
-	
-	
-	
-}	
-	
-//DTO 만드는 규칙
-	//테이블 만드는것과 동일하게 
 
+	public void setBoardTitle(String string) {
+		this.boardTitle = string;
+	}
+
+	public void setBoardWriter(String string) {
+		this.boardWriter = string;
+	}
+
+	public void setBoardContents(String string) {
+		this.boardContent = string;
+	}
+}	

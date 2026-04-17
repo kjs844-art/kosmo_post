@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- MAPPER.java의 풀패키지명/믈래스명 -->
+<mapper namespace="com.joe.kosmo_post.board.notice.NoticeMapper">
+	<select id="getCount" resultType="long" parameterType="com.joe.kosmo_post.pager.Pager">
+		select count("BOARD_NUM") from "tb_notice"
+	</select>
 
-	<mapper namespace="com.joe.kosmo_post.board.notice.NoticeMapper">
-		<!-- ID는 mapper.java의 메서드명을 써라 -->
-		<select id="list" resultType="NoticeDTO">
-		select * from "tb_notice"
-		</select>
-	<insert id="create" parameterType="NoticeDTO">
-	INSERT INTO "TB_NOTICE"
-	VALUES (null,#(boardTitle),  
+	<select id="list" resultType="com.joe.kosmo_post.board.notice.NoticeDTO" parameterType="com.joe.kosmo_post.pager.Pager">
+		select
+			"BOARD_NUM" as board_num,
+			"BOARD_TITLE" as board_title,
+			"BOARD_WRITER" as board_writer,
+			"BOARD_CONTENT" as board_content,
+			"BOARD_DATE" as board_date,
+			"BOARD_HIT" as board_hit
+		from "tb_notice"
+		order by "BOARD_NUM" desc
+		limit #{perPage} offset #{startNum}
+	</select>
+
+	<select id="detail" resultType="com.joe.kosmo_post.board.notice.NoticeDTO" parameterType="com.joe.kosmo_post.board.BoardDTO">
+		select
+			"BOARD_NUM" as board_num,
+			"BOARD_TITLE" as board_title,
+			"BOARD_WRITER" as board_writer,
+			"BOARD_CONTENT" as board_content,
+			"BOARD_DATE" as board_date,
+			"BOARD_HIT" as board_hit
+		from "tb_notice"
+		where "BOARD_NUM" = #{boardNum}
+	</select>
+
+	<insert id="create" parameterType="com.joe.kosmo_post.board.notice.NoticeDTO">
+		insert into "tb_notice" ("BOARD_TITLE", "BOARD_WRITER", "BOARD_CONTENT", "BOARD_DATE", "BOARD_HIT")
+		values (#{boardTitle}, #{boardWriter}, #{boardContent}, current_timestamp, 0)
 	</insert>
-	<insert id="add" parameterType="NoticeDTO">
-    INSERT INTO "TB_NOTICE" (BOARD_TITLE, BOARD_WRITER, BOARD_CONTENTS, REG_DATE, VIEW_COUNT)
-    VALUES (#{boardTitle}, #{boardWriter}, #{boardContents}, CURRENT_TIMESTAMP, 0)
-</insert>
+
+	<update id="update" parameterType="com.joe.kosmo_post.board.notice.NoticeDTO">
+		update "tb_notice"
+		set "BOARD_TITLE" = #{boardTitle},
+			"BOARD_WRITER" = #{boardWriter},
+			"BOARD_CONTENT" = #{boardContent}
+		where "BOARD_NUM" = #{boardNum}
+	</update>
+
+	<delete id="delete" parameterType="com.joe.kosmo_post.board.BoardDTO">
+		delete from "tb_notice" where "BOARD_NUM" = #{boardNum}
+	</delete>
 	
-	</mapper>
+	<insert id="createFile" parameterType="NoticeFileDTO">
+        insert into "tb_notice_file" ("BOARD_NUM", "FILE_NAME", "FILE_SIZE", "FILE_TYPE")
+        values (#{boardNum}, #{fileName}, #{fileSize}, #{fileType})
+        </insert>
+        
+</mapper>

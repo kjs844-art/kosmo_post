@@ -1,0 +1,186 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-17T15:43:46.744+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Starting KosmoPostApplication using Java 21.0.10 with PID 26924 (C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main started by USER in C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post)
+2026-04-17T15:43:46.747+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T15:43:46.798+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-17T15:43:46.798+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-17T15:43:47.963+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-04-17T15:43:47.978+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T15:43:47.979+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-17T15:43:48.164+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-17T15:43:48.172+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T15:43:48.172+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1374 ms
+2026-04-17T15:43:48.805+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-17T15:43:48.888+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-04-17T15:43:48.922+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Started KosmoPostApplication in 2.657 seconds (process running for 3.059)
+2026-04-17T15:44:11.877+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-17T15:44:11.878+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-17T15:44:11.880+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-17T15:44:12.089+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-17T15:44:13.045+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e3039b1
+2026-04-17T15:44:13.051+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-17T15:53:16.016+09:00  INFO 26924 --- [kosmo_post] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
+2026-04-17T15:53:16.097+09:00  INFO 26924 --- [kosmo_post] [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-17T15:53:16.130+09:00  INFO 26924 --- [kosmo_post] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-04-17T15:53:16.158+09:00  INFO 26924 --- [kosmo_post] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-17T15:53:16.281+09:00  INFO 26924 --- [kosmo_post] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-17T15:53:16.417+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Starting KosmoPostApplication using Java 21.0.10 with PID 26924 (C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main started by USER in C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post)
+2026-04-17T15:53:16.418+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T15:53:16.913+09:00  WARN 26924 --- [kosmo_post] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main\com\joe\kosmo_post\board\notice\NoticeMapper.class]
+2026-04-17T15:53:16.921+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-17T15:53:16.980+09:00 ERROR 26924 --- [kosmo_post] [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main\com\joe\kosmo_post\board\notice\NoticeMapper.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:509) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:350) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:255) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scan(ClassPathBeanDefinitionScanner.java:255) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry(MapperScannerConfigurer.java:406) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:148) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:792) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610) ~[spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.13.jar:3.5.13]
+	at com.joe.kosmo_post.KosmoPostApplication.main(KosmoPostApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.13.jar:3.5.13]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 0
+	at org.springframework.asm.ClassReader.readUnsignedShort(ClassReader.java:3637) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:208) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:292) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122) ~[spring-core-6.2.17.jar:6.2.17]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:469) ~[spring-context-6.2.17.jar:6.2.17]
+	... 19 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-17T15:53:18.504+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Starting KosmoPostApplication using Java 21.0.10 with PID 26924 (C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main started by USER in C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post)
+2026-04-17T15:53:18.504+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T15:53:18.887+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-04-17T15:53:18.890+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T15:53:18.890+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-17T15:53:18.989+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-17T15:53:18.994+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T15:53:18.994+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 485 ms
+2026-04-17T15:53:19.179+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-17T15:53:19.189+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-04-17T15:53:19.192+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Started KosmoPostApplication in 0.733 seconds (process running for 573.328)
+2026-04-17T15:53:19.193+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-17T15:54:16.858+09:00  INFO 26924 --- [kosmo_post] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
+2026-04-17T15:54:16.865+09:00  INFO 26924 --- [kosmo_post] [       Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-17T15:54:16.898+09:00  INFO 26924 --- [kosmo_post] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-17T15:54:17.093+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Starting KosmoPostApplication using Java 21.0.10 with PID 26924 (C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main started by USER in C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post)
+2026-04-17T15:54:17.093+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T15:54:17.982+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-04-17T15:54:17.983+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T15:54:17.983+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-17T15:54:18.210+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-17T15:54:18.216+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T15:54:18.217+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2026-04-17T15:54:18.261+09:00  WARN 26924 --- [kosmo_post] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'noticeController': Unsatisfied dependency expressed through field 'noticeService': No qualifying bean of type 'com.joe.kosmo_post.board.notice.NoticeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-04-17T15:54:18.261+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-17T15:54:18.271+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-17T15:54:18.285+09:00 ERROR 26924 --- [kosmo_post] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field noticeService in com.joe.kosmo_post.board.notice.NoticeController required a bean of type 'com.joe.kosmo_post.board.notice.NoticeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.joe.kosmo_post.board.notice.NoticeService' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-17T15:54:19.798+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Starting KosmoPostApplication using Java 21.0.10 with PID 26924 (C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post\build\classes\java\main started by USER in C:\Users\USER\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\kosmo_post)
+2026-04-17T15:54:19.798+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T15:54:20.189+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-04-17T15:54:20.192+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T15:54:20.192+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-17T15:54:20.290+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-17T15:54:20.293+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-04-17T15:54:20.293+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 493 ms
+2026-04-17T15:54:20.476+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-04-17T15:54:20.487+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-04-17T15:54:20.490+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] c.joe.kosmo_post.KosmoPostApplication    : Started KosmoPostApplication in 0.74 seconds (process running for 634.626)
+2026-04-17T15:54:20.491+09:00  INFO 26924 --- [kosmo_post] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-17T15:54:38.246+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-17T15:54:38.246+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-17T15:54:38.247+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-17T15:54:38.256+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-17T15:54:38.419+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2cacc0cd
+2026-04-17T15:54:38.419+09:00  INFO 26924 --- [kosmo_post] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.

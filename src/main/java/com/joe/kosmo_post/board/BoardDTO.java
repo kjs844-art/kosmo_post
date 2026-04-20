@@ -1,6 +1,9 @@
 package com.joe.kosmo_post.board;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
+import com.joe.kosmo_post.file.FileDTO;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,15 +21,6 @@ public class BoardDTO {
 	private LocalDateTime boardDate; //작성일자
 	private Long boardHit; //조회수
 
-	public void setBoardTitle(String string) {
-		this.boardTitle = string;
-	}
-
-	public void setBoardWriter(String string) {
-		this.boardWriter = string;
-	}
-
-	public void setBoardContents(String string) {
-		this.boardContent = string;
-	}
+	private List<FileDTO> list; //첨부파일 리스트
+	
 }	

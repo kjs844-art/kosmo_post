@@ -19,4 +19,6 @@ public interface NoticeMapper {
     public int update(BoardDTO boardDTO) throws Exception;
 
     public int delete(BoardDTO boardDTO) throws Exception;
+
+	public Object getCount(Pager pager);
 }

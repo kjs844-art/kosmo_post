@@ -1,57 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.joe.kosmo_post.board.notice.NoticeMapper">
-	<select id="getCount" resultType="long" parameterType="com.joe.kosmo_post.pager.Pager">
-		select count("BOARD_NUM") from "tb_notice"
-	</select>
 
-	<select id="list" resultType="com.joe.kosmo_post.board.notice.NoticeDTO" parameterType="com.joe.kosmo_post.pager.Pager">
-		select
-			"BOARD_NUM" as board_num,
-			"BOARD_TITLE" as board_title,
-			"BOARD_WRITER" as board_writer,
-			"BOARD_CONTENT" as board_content,
-			"BOARD_DATE" as board_date,
-			"BOARD_HIT" as board_hit
-		from "tb_notice"
-		order by "BOARD_NUM" desc
-		limit #{perPage} offset #{startNum}
-	</select>
+    <sql id="search_sql">
+        <if test="search != null and search != ''">
+            WHERE
+            <choose>
+                <when test="kind == 'v2'">"BOARD_CONTENT"</when>
+                <when test="kind == 'v3'">"BOARD_WRITER"</when>
+                <otherwise>"BOARD_TITLE"</otherwise>
+            </choose>
+            LIKE concat('%', #{search}, '%')
+        </if>
+    </sql>
 
-	<select id="detail" resultType="com.joe.kosmo_post.board.notice.NoticeDTO" parameterType="com.joe.kosmo_post.board.BoardDTO">
-		select
-			"BOARD_NUM" as board_num,
-			"BOARD_TITLE" as board_title,
-			"BOARD_WRITER" as board_writer,
-			"BOARD_CONTENT" as board_content,
-			"BOARD_DATE" as board_date,
-			"BOARD_HIT" as board_hit
-		from "tb_notice"
-		where "BOARD_NUM" = #{boardNum}
-	</select>
+    <resultMap type="com.joe.kosmo_post.board.notice.NoticeDTO" id="detailResult">
+        <id column="BOARD_NUM" property="boardNum"/>
+        <result column="BOARD_TITLE" property="boardTitle"/>
+        <result column="BOARD_WRITER" property="boardWriter"/>
+        <result column="BOARD_CONTENT" property="boardContent"/>
+        <result column="BOARD_DATE" property="boardDate"/>
+        <result column="BOARD_HIT" property="boardHit"/>
+    </resultMap>
 
-	<insert id="create" parameterType="com.joe.kosmo_post.board.notice.NoticeDTO">
-		insert into "tb_notice" ("BOARD_TITLE", "BOARD_WRITER", "BOARD_CONTENT", "BOARD_DATE", "BOARD_HIT")
-		values (#{boardTitle}, #{boardWriter}, #{boardContent}, current_timestamp, 0)
-	</insert>
+    <select id="getCount"
+            resultType="long"
+            parameterType="com.joe.kosmo_post.pager.Pager">
+        SELECT COUNT("BOARD_NUM")
+        FROM "tb_notice"
+        <include refid="search_sql"/>
+    </select>
 
-	<update id="update" parameterType="com.joe.kosmo_post.board.notice.NoticeDTO">
-		update "tb_notice"
-		set "BOARD_TITLE" = #{boardTitle},
-			"BOARD_WRITER" = #{boardWriter},
-			"BOARD_CONTENT" = #{boardContent}
-		where "BOARD_NUM" = #{boardNum}
-	</update>
+    <select id="list"
+            resultType="com.joe.kosmo_post.board.notice.NoticeDTO"
+            parameterType="com.joe.kosmo_post.pager.Pager">
+        SELECT
+            "BOARD_NUM" as board_num,
+            "BOARD_TITLE" as board_title,
+            "BOARD_WRITER" as board_writer,
+            "BOARD_CONTENT" as board_content,
+            "BOARD_DATE" as board_date,
+            "BOARD_HIT" as board_hit
+        FROM "tb_notice"
+        <include refid="search_sql"/>
+        ORDER BY "BOARD_NUM" DESC
+        LIMIT #{perPage} OFFSET #{startNum}
+    </select>
 
-	<delete id="delete" parameterType="com.joe.kosmo_post.board.BoardDTO">
-		delete from "tb_notice" where "BOARD_NUM" = #{boardNum}
-	</delete>
-	
-	<insert id="createFile" parameterType="NoticeFileDTO">
-        insert into "tb_notice_file" ("BOARD_NUM", "FILE_NAME", "FILE_SIZE", "FILE_TYPE")
-        values (#{boardNum}, #{fileName}, #{fileSize}, #{fileType})
-        </insert>
-        
+    <select id="detail"
+            parameterType="com.joe.kosmo_post.board.BoardDTO"
+            resultMap="detailResult">
+        SELECT
+            "BOARD_NUM",
+            "BOARD_TITLE",
+            "BOARD_WRITER",
+            "BOARD_CONTENT",
+            "BOARD_DATE",
+            "BOARD_HIT"
+        FROM "tb_notice"
+        WHERE "BOARD_NUM" = #{boardNum}
+    </select>
+
+    <insert id="create"
+            parameterType="com.joe.kosmo_post.board.BoardDTO"
+            useGeneratedKeys="true"
+            keyProperty="boardNum">
+        INSERT INTO "tb_notice"
+        ("BOARD_TITLE", "BOARD_WRITER", "BOARD_CONTENT", "BOARD_DATE", "BOARD_HIT")
+        VALUES
+        (#{boardTitle}, #{boardWriter}, #{boardContent}, now(), 0)
+    </insert>
+
+    <update id="update"
+            parameterType="com.joe.kosmo_post.board.BoardDTO">
+        UPDATE "tb_notice"
+        SET
+            "BOARD_TITLE" = #{boardTitle},
+            "BOARD_CONTENT" = #{boardContent}
+        WHERE "BOARD_NUM" = #{boardNum}
+    </update>
+
+    <delete id="delete"
+            parameterType="com.joe.kosmo_post.board.BoardDTO">
+        DELETE FROM "tb_notice"
+        WHERE "BOARD_NUM" = #{boardNum}
+    </delete>
+
 </mapper>
